@@ -16,7 +16,7 @@
  * Plugin Name:       Frontend Post Builder
  * Plugin URI:       https://github.com/salehfasih/Frontend-Post-Builder
  * Description:       It allows users to easily submit posts or custom content from the frontend of your WordPress site. Perfect for guest blogs, user-generated content, directories, and more — all with built-in security, moderation, and customization options.
- * Version:           1.0.0
+ * Version:          1.0.0
  * Author:            Muhammad Saleh
  * Author URI:       https://github.com/salehfasih/
  * License:           GPL-2.0+
