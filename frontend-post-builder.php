@@ -8,17 +8,17 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://www.example.com
+ * @link              https://github.com/salehfasih/Frontend-Post-Builder
  * @since             1.0.0
  * @package           Frontend_Post_Builder
  *
  * @wordpress-plugin
  * Plugin Name:       Frontend Post Builder
- * Plugin URI:        https://example.com
+ * Plugin URI:       https://github.com/salehfasih/Frontend-Post-Builder
  * Description:       It allows users to easily submit posts or custom content from the frontend of your WordPress site. Perfect for guest blogs, user-generated content, directories, and more — all with built-in security, moderation, and customization options.
  * Version:           1.0.0
  * Author:            Muhammad Saleh
- * Author URI:        https://www.example.com/
+ * Author URI:       https://github.com/salehfasih/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       frontend-post-builder

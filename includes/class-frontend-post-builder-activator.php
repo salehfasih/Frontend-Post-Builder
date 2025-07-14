@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       https://www.example.com
+ * @link       https://github.com/salehfasih/Frontend-Post-Builder
  * @since      1.0.0
  *
  * @package    Frontend_Post_Builder

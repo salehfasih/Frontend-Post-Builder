@@ -5,7 +5,7 @@
  *
  * This file is used to markup the public-facing aspects of the plugin.
  *
- * @link       https://www.example.com
+ * @link       https://github.com/salehfasih/Frontend-Post-Builder
  * @since      1.0.0
  *
  * @package    Frontend_Post_Builder
