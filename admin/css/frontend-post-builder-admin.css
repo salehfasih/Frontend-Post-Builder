@@ -1,0 +1,42 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+ .fps_admin_form form .fps_field {
+    display: inline;
+    padding: 6px 0;
+    margin-right: 10px;
+}
+.fps_admin_form, .fps_shortcode_wrapper{
+    padding: 40px 040px;
+    margin: 20px 0;
+    background: white;
+    width: 42%;
+    border-radius: 10px;
+}
+
+.fps_admin_form form .fps_field select {
+    width: 100%;
+}
+
+.fps_admin_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fps_main_wrapper {
+    gap: 20px;
+    display: flex;
+}
+
+.fps_admin_form form label {
+    width: 100%;
+    color: black;
+    padding: 0px 0;
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    display: block;
+}
