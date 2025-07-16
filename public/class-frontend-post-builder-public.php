@@ -100,7 +100,8 @@ class Frontend_Post_Builder_Public
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
+	
+    	wp_enqueue_media();
 		wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/frontend-post-builder-public.js', array('jquery'), $this->version, false);
 		wp_localize_script($this->plugin_name, 'fps_ajax_object', array(
 			'ajax_url' => admin_url('admin-ajax.php'),
@@ -151,6 +152,8 @@ class Frontend_Post_Builder_Public
 			$post_title = isset($_POST['fps_post_title']) && !empty($_POST['fps_post_title']) ? sanitize_text_field(wp_unslash($_POST['fps_post_title'])) : 'Demo Post';
 			$post_content =  isset($_POST['fps_post_content']) && !empty($_POST['fps_post_content']) ?  sanitize_textarea_field(wp_unslash($_POST['fps_post_content'])) : '';
 			$post_type =  isset($_POST['fps_post_type']) && !empty($_POST['fps_post_type']) ?   sanitize_text_field(wp_unslash($_POST['fps_post_type'])) : '';
+			$thumb_url =  isset($_POST['fps_file_url']) && !empty($_POST['fps_file_url']) ?   sanitize_text_field(wp_unslash($_POST['fps_file_url'])) : '';
+			
 			$post_status =  isset($_POST['fps_post_status']) && !empty($_POST['fps_post_status']) ?   sanitize_text_field(wp_unslash($_POST['fps_post_status'])) : '';
 
 			if (empty($post_title) || empty($post_content)) {
@@ -168,6 +171,14 @@ class Frontend_Post_Builder_Public
 
 			$post_id = wp_insert_post($post_data);
 
+			if($post_id && !is_wp_error($post_id) && !empty($thumb_url)) {
+				// Set the featured image if a file URL is provided
+				$thumb_id = attachment_url_to_postid($thumb_url);
+
+				if ($thumb_id) {
+					set_post_thumbnail($post_id, $thumb_id);
+				}
+			}
 			if (is_wp_error($post_id)) {
 				wp_send_json_error(array('message' => __('Failed to create post.', 'frontend-post-builder')));
 			} else {

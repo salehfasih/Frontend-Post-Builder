@@ -51,6 +51,11 @@
 				if (response.success) {
 
 					$(".fps_main_wrapper .submission_message").html("<p>Post created successfully!</p>");
+					setTimeout(function () {
+						$(".fps_main_wrapper .submission_message").html("");
+						$('.fps_frontend_form form')[0].reset();
+						location.reload();
+					}, 3000);
 
 				} else {
 					alert('Error creating post: ' + response.data);
@@ -63,4 +68,6 @@
 			}
 		});
 	});
+
+
 })(jQuery);
